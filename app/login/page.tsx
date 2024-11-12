@@ -5,23 +5,23 @@ import { SignInButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
-const LoginPage = async() => {
-    const { userId } = await auth();
-    if (userId) {
-        redirect("/");
-    }
+const LoginPage = async () => {
+  const { userId } = await auth();
+  if (userId) {
+    redirect("/");
+  }
   return (
-    <div className="grid grid-cols-2 h-full">
+    <div className="grid h-full grid-cols-2">
       <div className="mx-auto flex h-full max-w-[550px] flex-col justify-center p-8">
-      <Image
-        src="/logo.svg"
-        width={173}
-        height={39}
-        alt="Finance AI"
-        className="mb-8 object-cover"
-      />
+        <Image
+          src="/logo.svg"
+          width={173}
+          height={39}
+          alt="Finance AI"
+          className="mb-8 object-cover"
+        />
         <h1 className="mb-3 text-4xl font-bold">Bem-vindo</h1>
-        <p className="text-muted-foreground">
+        <p className="mb-3 text-muted-foreground">
           A Fincance AI é uma platarma de gestão finaceira que utiliza IA para
           monitorar suas movimentações, e oferecer insights personalizados,
           facilitando o controle do seu orçamento.
