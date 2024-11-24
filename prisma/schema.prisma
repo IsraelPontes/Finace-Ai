@@ -17,7 +17,7 @@ model Transaction {
   id            String                    @id @default(uuid())
   name          String
   type          TransactionType
-  anunt         Decimal                   @db.Decimal(10, 2)
+  amount         Decimal                   @db.Decimal(10, 2)
   category      TransactionCategory
   paymentMethod TransactionpPaymentMethod
   date          DateTime
@@ -36,7 +36,7 @@ enum TransactionCategory {
   HOUSING
   TRANSPORTATION
   FOOD
-  ENTERTEIMENT
+  ENTERTAINMENT
   HEALTH
   UTILITY
   SALARY
